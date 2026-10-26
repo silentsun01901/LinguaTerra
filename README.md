@@ -1,0 +1,13 @@
+LinguaTerra 1.6.8
+Translate webpages, live Discord chats, and selected text in 13 languages—privately, on your device.
+Authors: SilentSun01901, Valence.
+All supported Bergamot language models are included by default. No language downloads are needed after installation. Models are read directly from the installed extension folder and verified against pinned SHA-256 checksums. This release uses Bergamot by default, including on Edge, so browser-owned language-pack activation does not determine translation readiness. Models are not copied into an evictable browser cache. All inference stays on-device.
+English, Japanese, Korean, Simplified Chinese, Spanish, French, German, Portuguese, Russian, Arabic, Hindi, Italian and Ukrainian are supported. Non-English pairs translate through English.
+Installation
+Edge/Chrome: extract the Chromium ZIP fully into a permanent folder, open the extensions manager, enable Developer mode, and choose Load unpacked. Keep that installed folder; deleting it removes the model files as well as the extension scripts. The public key and extension identity are unchanged, preserving settings during a same-ID update. Uninstalling can delete settings.
+The first translation asks you to allow the local translator. Chromium requests the optional offscreen permission for its hidden local worker. This does not record the screen or access the clipboard. Your decision is remembered. Declining stops local translation. Reopen the choice from Language downloads → Local translation permissions. No extra model-download host permission is required.
+Firefox: the Firefox ZIP omits Chromium-only manifest fields. Unsigned builds can be loaded temporarily using about:debugging, but permanent installation requires Mozilla signing. This release has not been signed or published. Temporary installations do not survive browser restart.
+Automatic page translation uses your saved source and target languages. Discord keeps the original message with the translation below it. Selected editable text is replaced without sending the message or submitting the form. Models can make translation mistakes.
+The full installation contains roughly one gigabyte of model data. The initial ZIP download is larger than prior releases because language files are included. Updates currently include the full bundle; no automatic incremental updater is supplied.
+Licensing and source
+See THIRD_PARTY.md and vendor/bergamot/LICENSE for MPL-2.0 engine/model notices. This is an independent project, not a Mozilla product. The LinguaTerra authors have not yet selected a license for their own code. Mozilla signing review and corresponding compiled-library source/build-material verification remain separate pre-publication tasks.
